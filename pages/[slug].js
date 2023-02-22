@@ -1,8 +1,11 @@
+import { MDXRemote } from 'next-mdx-remote'
 import { getFilesBySlug, getFiles } from "@/lib/mdx"
+import MDXComponents from '@/components/MDXComponents'
+
 
 export default function Post({ source, frontmatter }) {
-    console.log(source)
-    return <h1>Post</h1>
+    return <MDXRemote {...source} components={MDXComponents} />
+    //esto es para un mandar un componente a los markdown
 }
 
 export async function getStaticProps({ params }) {
