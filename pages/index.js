@@ -24,7 +24,7 @@ export default function Home({ posts }) {
         </h1>
       </header>
       <main>
-        <div>
+        <div className={styles.gridPosit}>
           {posts.map((post) => (
 
             <Link key={post.slug} href={`/${post.slug}`} >
